@@ -15,8 +15,6 @@ jobs:
 
     steps:
     - name: Remove old artifacts
-      uses: c-hive/gha-remove-artifacts@v1
+    - uses: Remagpie/gha-remove-artifact@v1
       with:
-        age: '1 day' # '<number> <unit>', e.g. 5 days, 2 years, 90 seconds, parsed by Moment.js
-        skip-tags: false
-        skip-recent: 3
+        max-age: 86400 # 24 * 60 * 60
